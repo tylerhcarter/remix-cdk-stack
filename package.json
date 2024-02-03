@@ -5,11 +5,15 @@
   "type": "module",
   "scripts": {
     "build": "remix build",
+    "cdk": "npm run cdk --workspace=cdk",
     "dev": "remix dev --manual",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "start": "remix-serve ./build/index.js",
     "typecheck": "tsc"
   },
+  "workspaces": [
+    "cdk"
+  ],
   "dependencies": {
     "@remix-run/css-bundle": "^2.6.0",
     "@remix-run/node": "^2.6.0",
